@@ -1,58 +1,84 @@
-Network Traffic Analyzer
+🌐 Network Traffic Analyzer
 
-A simple network traffic analysis project developed using C++ and PHP.
+📌 Project Overview
 
-1. Project Overview
+Network Traffic Analyzer is a network analysis project developed using C++ and PHP. It reads traffic records from a text file, validates IP addresses, analyzes packet information, and generates statistical reports.
 
-Network Traffic Analyzer is a file-based program designed to read network traffic records and analyze packet information.
+🎯 Project Objectives
 
-The program reads data from a text file, processes the records using C++, and displays the analysis report through PHP in the terminal.
+* Analyze network traffic records.
+* Validate IPv4 addresses.
+* Display source and destination IP addresses.
+* Calculate packet statistics.
+* Identify maximum, minimum, and average packet sizes.
 
-2. Technologies Used
+🛠️ Technologies Used
 
-* C++: Processes and analyzes packet information.
-* PHP: Runs the C++ analyzer and displays the results.
-* TXT: Stores sample network traffic data.
+Technology	Role
+C++	Packet processing, IP validation, and statistical calculations
+PHP	Main interface and execution management
+Text File	Stores network traffic records
 
-3. Main Features
+📁 Project Structure
 
-* Read network traffic data from a text file.
-* Display source IP addresses.
-* Display destination IP addresses.
-* Display packet sizes.
-* Calculate total data size.
-* Calculate average packet size.
-* Identify maximum packet size.
-* Identify minimum packet size.
-* Validate IP address format.
-* Detect invalid records.
+File	Description
+analyzer.cpp	Core analysis and calculations
+main.php	Main program and C++ integration
+traffic.txt	Input data containing traffic records
+analyzer.exe	Compiled C++ program
 
-4. Project Structure
+⚙️ How It Works
 
-Network-Traffic-Analyzer/
-│
-├── analyzer.cpp
-├── analyzer.exe
-├── main.php
-├── traffic.txt
-├── README.md
-│
-└── screenshots/
-    ├── 01-project-output.png
-    ├── 02-packet-details.png
-    └── 03-packet-analysis.png
+The project follows four main steps:
 
-5. How It Works
+1. Input: Read traffic records from traffic.txt.
+2. Validation: Check IPv4 addresses and packet sizes.
+3. Processing: Analyze each packet and calculate statistics.
+4. Output: Display packet details and the final analysis report.
 
-1. The program reads packet records from traffic.txt.
-2. C++ processes the packet information.
-3. The program calculates packet statistics.
-4. PHP executes the C++ analyzer.
-5. The final report is displayed in the terminal.
+📊 Packet Data Format
 
-6. How to Run
+Each line contains three fields:
 
-Compile the C++ program:
+Source IP, Destination IP, Packet Size
+
+Example:
+
+192.168.1.10,192.168.1.20,1500
+192.168.1.15,192.168.1.30,800
+
+🔍 Main Features
+
+* IPv4 address validation.
+* Source and destination IP identification.
+* Individual packet analysis.
+* Total data calculation.
+* Average packet size.
+* Maximum packet size.
+* Minimum packet size.
+* Invalid record detection.
+
+💻 Implementation & Screenshots
+
+1. C++ Analysis Engine
+
+The C++ program handles packet validation, processing, and statistical calculations.
+
+2. PHP Integration
+
+PHP manages the execution of the C++ analyzer and displays the results.
+
+3. Packet Analysis
+
+Displays individual packet information, including source IP, destination IP, and packet size.
+
+4. Final Output
+
+The final report displays the processed traffic data and statistical results.
+
+⚙️ Compilation and Execution
+
+Compile C++ using GCC:
 
 g++ analyzer.cpp -o analyzer.exe
 
@@ -60,40 +86,38 @@ Run the PHP program:
 
 php main.php
 
-7. Sample Analysis Results
+Make sure PHP, GCC, and the required project files are available.
 
-The current sample data contains 8 packet records.
+📈 Statistical Calculations
 
-* Total Data: 8350 Bytes
-* Average Packet Size: 1043 Bytes (as displayed by the program)
-* Maximum Packet Size: 2000 Bytes
-* Minimum Packet Size: 500 Bytes
+Statistic	Description
+Total Data	Sum of all packet sizes
+Average Size	Total data divided by packet count
+Maximum Size	Largest packet
+Minimum Size	Smallest packet
 
-8. Screenshots
+🧠 Skills Developed
 
-Project Output
+* C++ Programming
+* PHP Programming
+* IPv4 Address Validation
+* File Handling
+* Data Processing
+* Network Fundamentals
+* PHP and C++ Integration
+* Statistical Analysis
 
-Packet Details
-
-Packet Analysis
-
-9. Future Improvements
+🚀 Future Improvements
 
 The following features are planned for future development:
 
-* TCP protocol analysis.
-* UDP protocol analysis.
-* Additional network traffic statistics.
-* More advanced packet analysis.
+* TCP Protocol Analysis.
+* UDP Protocol Analysis.
+* Advanced network traffic classification.
+* More detailed network statistics.
 
-Note: TCP and UDP analysis are not implemented in the current version.
+TCP and UDP support are planned features and are not implemented in the current version.
 
-10. Project Status
+👨‍💻 Author
 
-Current version: 1.0
-
-Status: Initial version completed. Further improvements are planned.
-
-⸻
-
-Developed as a learning project using C++ and PHP.
+Developed as a practical project to explore network traffic analysis using C++ and PHP.
