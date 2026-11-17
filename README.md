@@ -1,123 +1,120 @@
-🌐 Network Traffic Analyzer
+# Analyseur de trafic réseau (C++ / PHP)
 
-📌 Project Overview
+Projet d'analyse de trafic réseau développé en **C++** et **PHP**. Il lit des enregistrements de trafic depuis un fichier texte, valide les adresses IPv4, analyse les paquets et génère un rapport statistique.
 
-Network Traffic Analyzer is a network analysis project developed using C++ and PHP. It reads traffic records from a text file, validates IP addresses, analyzes packet information, and generates statistical reports.
+## Objectifs
 
-🎯 Project Objectives
+- Analyser des enregistrements de trafic réseau
+- Valider les adresses IPv4
+- Afficher les adresses IP source et destination
+- Calculer des statistiques sur les paquets
+- Identifier la taille maximale, minimale et moyenne des paquets
 
-* Analyze network traffic records.
-* Validate IPv4 addresses.
-* Display source and destination IP addresses.
-* Calculate packet statistics.
-* Identify maximum, minimum, and average packet sizes.
+## Technologies utilisées
 
-🛠️ Technologies Used
+| Technologie | Rôle |
+|---|---|
+| **C++** | Traitement des paquets, validation des IP et calculs statistiques |
+| **PHP** | Interface principale et lancement du programme C++ |
+| **Fichier texte** | Stockage des enregistrements de trafic |
 
-Technology	Role
-C++	Packet processing, IP validation, and statistical calculations
-PHP	Main interface and execution management
-Text File	Stores network traffic records
+## Structure du projet
 
-📁 Project Structure
+| Fichier | Description |
+|---|---|
+| `analyzer.cpp` | Analyse et calculs (cœur du programme) |
+| `main.php` | Programme principal et intégration avec le C++ |
+| `traffic.txt` | Données d'entrée : enregistrements de trafic |
+| `analyzer.exe` | Programme C++ compilé (généré par la compilation) |
 
-File	Description
-analyzer.cpp	Core analysis and calculations
-main.php	Main program and C++ integration
-traffic.txt	Input data containing traffic records
-analyzer.exe	Compiled C++ program
+## Fonctionnement
 
-⚙️ How It Works
+1. **Entrée :** lecture des enregistrements depuis `traffic.txt`.
+2. **Validation :** vérification des adresses IPv4 et des tailles de paquets.
+3. **Traitement :** analyse de chaque paquet et calcul des statistiques.
+4. **Sortie :** affichage des détails des paquets et du rapport final.
 
-The project follows four main steps:
+## Format des données
 
-1. Input: Read traffic records from traffic.txt.
-2. Validation: Check IPv4 addresses and packet sizes.
-3. Processing: Analyze each packet and calculate statistics.
-4. Output: Display packet details and the final analysis report.
+Chaque ligne contient trois champs : `IP source, IP destination, taille du paquet`
 
-📊 Packet Data Format
+Exemple :
 
-Each line contains three fields:
-
-Source IP, Destination IP, Packet Size
-
-Example:
-
+```
 192.168.1.10,192.168.1.20,1500
 192.168.1.15,192.168.1.30,800
+```
 
-🔍 Main Features
+## Fonctionnalités
 
-* IPv4 address validation.
-* Source and destination IP identification.
-* Individual packet analysis.
-* Total data calculation.
-* Average packet size.
-* Maximum packet size.
-* Minimum packet size.
-* Invalid record detection.
+- Validation des adresses IPv4
+- Identification des adresses source et destination
+- Analyse de chaque paquet
+- Calcul du volume total de données
+- Taille moyenne, maximale et minimale des paquets
+- Détection des enregistrements invalides
 
-💻 Implementation & Screenshots
+## Statistiques calculées
 
-1. C++ Analysis Engine
+| Statistique | Description |
+|---|---|
+| Total des données | Somme des tailles de tous les paquets |
+| Taille moyenne | Total divisé par le nombre de paquets |
+| Taille maximale | Plus grand paquet |
+| Taille minimale | Plus petit paquet |
 
-The C++ program handles packet validation, processing, and statistical calculations.
+## Compilation et exécution
 
-2. PHP Integration
+Compiler le programme C++ avec GCC :
 
-PHP manages the execution of the C++ analyzer and displays the results.
-
-3. Packet Analysis
-
-Displays individual packet information, including source IP, destination IP, and packet size.
-
-4. Final Output
-
-The final report displays the processed traffic data and statistical results.
-
-⚙️ Compilation and Execution
-
-Compile C++ using GCC:
-
+```
 g++ analyzer.cpp -o analyzer.exe
+```
 
-Run the PHP program:
+Lancer le programme PHP :
 
+```
 php main.php
+```
 
-Make sure PHP, GCC, and the required project files are available.
+PHP, GCC et les fichiers du projet doivent être disponibles.
 
-📈 Statistical Calculations
+## Captures d'écran
 
-Statistic	Description
-Total Data	Sum of all packet sizes
-Average Size	Total data divided by packet count
-Maximum Size	Largest packet
-Minimum Size	Smallest packet
+### 1. Programme C++ (analyse et calculs)
 
-🧠 Skills Developed
+![Code C++](analyzer-cpp.png)
 
-* C++ Programming
-* PHP Programming
-* IPv4 Address Validation
-* File Handling
-* Data Processing
-* Network Fundamentals
-* PHP and C++ Integration
-* Statistical Analysis
+### 2. Intégration PHP
 
-🚀 Future Improvements
+![Code PHP](main-php.png)
 
-The following features are planned for future development:
+### 3. Analyse des paquets
 
-* TCP Protocol Analysis.
-* UDP Protocol Analysis.
-* Advanced network traffic classification.
-* More detailed network statistics.
+![Analyse des paquets](packet-analysis.png)
 
-TCP and UDP support are planned features and are not implemented in the current version.
+### 4. Résultat final
 
-👨‍💻 Author
+![Résultat final](project-output.png)
 
-Developed as a practical project to explore network traffic analysis using C++ and PHP.
+## Compétences mises en œuvre
+
+- Programmation en C++ et en PHP
+- Validation d'adresses IPv4
+- Lecture et traitement de fichiers
+- Notions de réseaux
+- Intégration PHP et C++
+- Calculs statistiques
+
+## Améliorations prévues
+
+- Analyse du protocole TCP
+- Analyse du protocole UDP
+- Classification avancée du trafic
+- Statistiques réseau plus détaillées
+
+Les fonctionnalités TCP et UDP sont prévues et ne sont pas implémentées dans la version actuelle.
+
+## Auteur
+
+Cheikh Mohamed Asker Ahmed Aghmenane
